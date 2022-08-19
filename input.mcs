@@ -1,0 +1,16 @@
+function sqrt in
+  start = 1
+  end = start / 2
+  
+  do
+    out = (start + end) / 2
+    sqr = out * out
+    
+    if sqr < in
+      start = out + 1
+    if sqr > in
+      end = out - 1
+  while sqr != in & start <= end
+  
+  if sqr > in
+    out -= 1

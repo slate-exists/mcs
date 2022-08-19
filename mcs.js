@@ -29,3 +29,18 @@ const TokenType = {
     /* other tokens */
     ERROR: 29, EOF: 30,
 };
+
+const scanner = {
+    source: null,
+    start: 0,
+    current: 0,
+    line: 1
+};
+
+function init_scanner(source)
+{
+    scanner.source = source;
+    scanner.start = 0;
+    scanner.current = 0;
+    scanner.line = 1;
+}

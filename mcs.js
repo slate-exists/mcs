@@ -44,3 +44,21 @@ function init_scanner(source)
     scanner.current = 0;
     scanner.line = 1;
 }
+
+function Token(source, start, length, type)
+{
+    this.source = source;
+    this.start = start;
+    this.length = length;
+    this.type = type;
+}
+
+function create_token(type)
+{
+    return new Token(scanner.source, scanner.start, scanner.length, type);
+}
+
+function scan_token()
+{
+    if (is_at_end()) return create_token(TokenType.EOF);
+}
